@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Изображения</title>
+</head>
+<body>
+<p>Альтернативный текст</p>
+<img src="C:\Users\poleh\OneDrive\Документы\images\aquaria.jpg" alt="Черепаха">
+<p>Размеры изображения</p>
+
+<img src="C:\Users\poleh\OneDrive\Документы\images\slon.png" alt="Слон">
+<img src="C:\Users\poleh\OneDrive\Документы\images\slon.png" alt="Слон_500px" width=500px>
+
+<br>
+
+<img src="C:\Users\poleh\OneDrive\Документы\images\mushroom.jpg" alt="Гриб"
+srcset="C:\Users\poleh\OneDrive\Документы\images\mushroom_portrait.jpg 600w,
+C:\Users\poleh\OneDrive\Документы\images\mushroom_landscape.jpg 600w 300h,
+C:\Users\poleh\OneDrive\Документы\images\mushroom_retina.jpg 1200w,
+C:\Users\poleh\OneDrive\Документы\images\mushroom.jpg 600w"
+sizes="(max-width:600px) 300px,
+		(max-height:300px) 100vw,
+		(min-width:1200px) 1200px,
+		600px"
+>
+<p>Подпись к изображению</p>
+<figure>
+<img src="C:\Users\poleh\OneDrive\Документы\images\light.gif" alt="light">
+<figcaption>Gif. Свеча</figcaption>
+</figure>
+<p>Элемент picture</p>
+<picture>
+ <source srcset="C:\Users\poleh\OneDrive\Документы\images\redcat.jpg" media="(max-height: 600px)">
+ <source srcset="C:\Users\poleh\OneDrive\Документы\images\globus.gif" media="(max-width: 1000px)">
+ <source srcset="C:\Users\poleh\OneDrive\Документы\images\muscle.png" media="(min-width: 1000px)">
+ <source srcset="C:\Users\poleh\OneDrive\Документы\images\html5-logo.png">
+ <img src="C:\Users\poleh\OneDrive\Документы\images\html5-logo.png" alt="HTML5-logo">
+</picture>
+</body>
+</html>
