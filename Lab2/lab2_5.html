@@ -1,0 +1,34 @@
+<html>
+
+<meta charset="utf-8">
+<title>Форма</title>
+</head>
+
+<form action="#">
+<h1>Форма регистрации пользователя</h1>
+<table>
+	<tr><td>E-Mail</td><td><input type="email" required placeholder="Введите e-mail"></td></tr>
+	<tr><td>Пароль</td><td><input type="password" required placeholder="Введите пароль"></td></tr>
+	<tr><td>Пол</td><td>
+	<!--Одинаковый name="a", переключатель работает правильно-->
+	<label><input type="radio" name="a" value="Русский" checked>Мужчина</label><label><input type="radio" name="a" value="Русский">Женщина</label>
+	</td></tr>
+	<tr><td>Год рождения <td><select name="с">
+	<option value="r1">1981</option>
+	<option value="r2">1982</option>
+	<option value="r3">1983</option>
+	<option value="r4">1984</option></select>-й</td></tr>
+	<tr><td>Я знаю</td>
+	<td>
+		<label><input type="checkbox" name="b" value="Русский" checked disabled>Русский</label><br>
+		<label><input type="checkbox" name="b" value="Испанский">Испанский</label><br>
+		<label><input type="checkbox" name="b" value="Немецкий">Немецкий</label><br>
+		<label><input type="checkbox" name="b" value="Английский">Английский</label><br>
+		<label><input type="checkbox" name="b" value="Китайский">Китайский</label>
+	</td></tr>
+	<tr><td>Обо мне </td><td><textarea placeholder="Напишите коротко о себе" rows="8" cols="35"></textarea></td></tr>
+	<tr><td></td><td><button>Готово</button> <button>Очистить</button></td></tr>
+</table>
+</form>
+</body>
+</html>
