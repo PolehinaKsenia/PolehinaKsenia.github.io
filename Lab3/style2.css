@@ -1,0 +1,16 @@
+body{
+	
+	background-color: black;
+	color: white;display: inline-block;
+}
+h1,h2{
+	font-family: Arial;
+	color: red;
+	text-align: right;
+}
+p{
+	text-align: right;
+}
+em{
+	color: green;
+}
