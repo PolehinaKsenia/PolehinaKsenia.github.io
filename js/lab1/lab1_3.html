@@ -8,11 +8,14 @@
 </head>
 <body>
     <script>
-        let x;
-        while(x>100)
-        {  
+        while(true)
+        {
             x=prompt("Введите число > 100: ");
-            alert("yes");
+            if(x>100) 
+            {
+                alert("Yes");
+                break;
+            }
         }
     </script>
 </body>
