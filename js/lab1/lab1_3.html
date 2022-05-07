@@ -8,6 +8,7 @@
 </head>
 <body>
     <script>
+        'use strict';
         while(true)
         {
             x=prompt("Введите число > 100: ");
@@ -16,7 +17,7 @@
                 alert("Yes");
                 break;
             }
-            else if(event.code=="Cancel") break;
+            else x=null;
         }
     </script>
 </body>
