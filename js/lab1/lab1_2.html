@@ -8,9 +8,17 @@
 </head>
 <body>
     <script>
+        'use strict'
         let num;
         num = prompt("Введите целое число: ");
-        if (num => 10 && num <= 20)
+        switch (num){
+            case num%10:
+                alert("На ветке сидит {num} ворона");
+            break;
+            case num%100:
+                alert("На ветке сидит {num} вороны");
+            break;
+        }
         
     </script>
 </body>
