@@ -9,14 +9,15 @@
 <body>
     <script>
         'use strict';
-        while(true) {
-            x=prompt("Введите число > 100: ");
-            if(x>100) {
-                alert("Yes");
-                break;
-            }
-            else if (x<=z00) alert("no");
-        }
+        let x,y;
+			x=prompt("Введите число > 100");
+			y=x;
+			do {
+				y=prompt("Введите число > 100");
+				if(y > 100)
+					break;
+			}
+			while(x <= 100)
     </script>
 </body>
 </html>
