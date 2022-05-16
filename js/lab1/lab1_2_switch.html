@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        let num = prompt('На ветке сидит [num] ворон?');
+		switch(num){
+        case num > 4 && num < 21:
+			alert("На ветке сидит "+num+" ворон");
+			break;
+		case num % 10 == 1:
+			alert("На ветке сидит "+num+" ворона");
+			break;
+		case num % 10 > 1 && num % 10 < 5:
+			alert("На ветке сидит "+num+" вороны");
+			break;
+		default:
+			alert("На ветке сидит "+num+" ворон");
+			break;
+		}
+    </script>
+</body>
+</html>
