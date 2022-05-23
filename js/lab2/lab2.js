@@ -26,15 +26,21 @@ function factorial(n) {
 /*Этот код возвращает n-е число Фибоначчи.
 Возвращаемое значение должно иметь тип BigInt.*/
 function fib(n) {
-  let a = 1;
-  let b = 1;
-  for (let i = 3; i <= n; i++) {
-    let c = a + b;
-    a = b;
-    b = c;
+    let a = 1n;
+    let b = 1n;
+    let c;
+    if (n==0) return 0;
+    if (n==1) return 1;
+    if (n==2) return 1;
+    for (let i = 3; i <= n; i++) {
+      c = a + b;
+      a = b;
+      b = c;
+    }
+    if (b==1n)
+      b = 0;
+    return b; 
   }
-  return BigInt(b);
-}
 //-------------------------------------------------------------------
 /*Этот код принимает целочисленное значение x и возвращает анонимную функцию.*/
 function compare(n,m){
