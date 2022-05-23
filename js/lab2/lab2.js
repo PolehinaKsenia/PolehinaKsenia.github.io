@@ -10,7 +10,7 @@ function pow(x, n) {
 				 result *=x;
         } else if (n < 0) {
           result *= x;
-          result = 1/x;
+          result = 1/result;
         }
         else result = 1;
 	return result;
