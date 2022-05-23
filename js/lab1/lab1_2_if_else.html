@@ -11,15 +11,19 @@
 <body>
     <script>
         "use strict";
-        let num = prompt('На ветке сидит [num] ворон?');
-        if (num > 4 && num < 21)
-			alert("На ветке сидит "+num+" ворон");
-		else if (num % 10 == 1)
-			alert("На ветке сидит "+num+" ворона");
-		else if (num % 10 > 1 && num % 10 < 5)
-			alert("На ветке сидит "+num+" вороны");
-		else
-			alert("На ветке сидит "+num+" ворон");
+        let num = prompt('На ветке сидит num ворон?');
+        if ((num%100>=5 && num%100 <=20)||(num%100==0))
+            {
+                alert(`На ветке сидит ${num} ворон`);
+            }
+            else if ((num%10>=2 && num%10<=4)&&!(num%100>=10 && num%100 <=20))
+            {
+                alert("На ветке сидит "+num+" вороны");
+            }
+            else {
+                alert("На ветке сидит "+num+" ворона");
+            }
     </script>
 </body>
+
 </html>
