@@ -1,14 +1,12 @@
-/**
- * Этот код возводит в степень n число x
- * @param {number} x основание
- * @param {number} n степень
- * @returns x^n
- */
+/*Этот код возводит в степень n число x*/
 function pow(x, n) {
 				let result = x;
-				for (let i = 1; i < n; i++) {
+				if(n > 0){
 				result *= x;
-				}
+				} else if (n < 0) {
+					result *= x;
+					result = 1/result;
+				} else {result = 1;}
 			return result;
 			}
 //-------------------------------------------------------------------
