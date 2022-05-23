@@ -9,7 +9,12 @@
 		<script>
 			'use strict';
 			let x = prompt("Введите х",1);
-			alert( sumTo(x) );
+			if(x <= 0){
+				
+				alert("Число должно быть натуральным!");
+			} else {
+				alert(sumTo(x));
+			}
 		</script>
 	</body>
 </html>

@@ -9,7 +9,11 @@
 		<script>
 			'use strict';
 			let x = prompt("Введите х",1);
-			alert(fib(x));
+			if (x < 0) {
+				alert('Число должно быть неотрицательным!');
+			} else {
+				alert(fib(x));
+			}
 		</script>
 	</body>
 </html>
