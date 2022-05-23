@@ -9,6 +9,7 @@ function pow(x, n) {
         if(n > 0){
 				 result *=x;
         } else if (n < 0) {
+          result *= x;
           result = 1/x;
         }
         else result = 1;
