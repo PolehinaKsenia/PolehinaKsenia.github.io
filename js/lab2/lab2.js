@@ -1,4 +1,9 @@
-/*Этот код возводит в степень n число x*/
+/**
+ * Этот код возводит в степень n число x
+ * @param {number} x основание
+ * @param {number} n степень
+ * @returns x^n
+ */
 function pow(x, n) {
 				let result = x;
 				for (let i = 1; i < n; i++) {
