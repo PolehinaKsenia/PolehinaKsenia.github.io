@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1</title>
+</head>
+<body>
+    <script type="text/javascript">
+        'use strict'
+        let book1={};
+
+        book1.title = "Математический анализ";
+        book1.pubYear = 2003;
+        book1.price = 1500;
+        
+        let book2={
+            title: "Алгоритмы: построение и анализ",
+            pubYear: 2013,
+            price: 1800
+        };
+
+        console.log("book1:");
+        for (let prop in book1)
+            console.log(prop +":"+ book1[prop]);
+        console.log("\n");
+
+        console.log("book2:");
+        for (let prop in book2)
+            console.log(prop +":"+ book2[prop]);
+
+
+    </script>
+</body>
+</html>
