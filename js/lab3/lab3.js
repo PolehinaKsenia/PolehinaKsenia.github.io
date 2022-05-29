@@ -1,3 +1,8 @@
+/**
+ * Этот код возвращает дробную часть числа num.
+ * @param {number} num 
+ * @returns 
+ */
 function getDecimal(num) {
     let a = num.slice(num.indexOf('.'));
     if (num.indexOf(".") == -1) {
@@ -10,13 +15,23 @@ function getDecimal(num) {
     }
     return str;
 }
-
+//-------------------------------------------------
+/**
+ * Этот код возвращает строку str с заглавным первым символом.
+ * @param {number} str 
+ * @returns 
+ */
 function ucFirst(str) {
     if (!str) return str;
 
     return str[0].toUpperCase() + str.slice(1);
 }
-
+//-------------------------------------------------
+/**
+ * Этот код возвращает true, если строка str содержит 'viagra' или 'XXX', а иначе false.
+ * @param {text} str 
+ * @returns 
+ */
 function checkSpam(str) {
     let firstWord = 'viagra';
     let secondWord = 'xxx';
@@ -41,15 +56,29 @@ function checkSpam(str) {
         }
     }
 }
-
-
+//-------------------------------------------------
+/**
+ * Этот код проверяет длину строки str, и если 
+ * она превосходит maxlength – заменяет конец str 
+ * на символ многоточие "…" (номер в Юникоде U+2026), 
+ * так чтобы ее длина стала равна maxlength. 
+ * @param {text} str 
+ * @param {number} maxlength 
+ * @returns 
+ */
 function truncate(str, maxlength) {
     if (str.length > maxlength)
         str = str.slice(0, maxlength - 1) + '\u{2026}';
     return str;
 }
-
-
+//-------------------------------------------------
+/**
+ * Этот код преобразуeт строку вида 'var-test-text'
+ * в 'varTestText'. То есть, дефисы удаляются, 
+ * а все слова после них получают заглавную букву.
+ * @param {text} str 
+ * @returns 
+ */
 function camelize(str) {
     return str
         .split('-')
@@ -58,7 +87,14 @@ function camelize(str) {
         )
         .join('');
 }
-
+//-------------------------------------------------
+/**
+ * Этот код для натурального n возвращает массив, 
+ * заполненный числами Фибоначчи до n-го 
+ * (не включая его).
+ * @param {number} N 
+ * @returns 
+ */
 function fibs(N) {
     let a = [];
     let str = '';
@@ -90,10 +126,11 @@ function fibs(N) {
         return b;
     }
 }
-
-
-
-
+//-------------------------------------------------
+/**
+ * Этот код возвращает сумму всех своих аргументов
+ * @returns 
+ */
 function sum() {
     let result = 0;
 
