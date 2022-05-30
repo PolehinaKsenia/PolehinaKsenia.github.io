@@ -1,35 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<html>
+<head>
 <meta charset="utf-8">
 <title>Форма</title>
+<style>
+table {
+	width: 400px;
+	border: none;
+	margin: 10px;
+	float: left;
+}
+td, th {
+	border: none;
+	padding: 10px;
+}
+</style>
 </head>
-
+<body>
 <form action="#">
-<h1>Форма регистрации пользователя</h1>
-<table>
-	<tr><td>E-Mail</td><td><input type="email" required placeholder="Введите e-mail"></td></tr>
-	<tr><td>Пароль</td><td><input type="password" required placeholder="Введите пароль"></td></tr>
-	<tr><td>Пол</td><td>
-	<!--Одинаковый name="a", переключатель работает правильно-->
-	<label><input type="radio" name="a" value="Русский" checked>Мужчина</label><label><input type="radio" name="a" value="Русский">Женщина</label>
-	</td></tr>
-	<tr><td>Год рождения <td><select name="с">
-	<option value="r1">1981</option>
-	<option value="r2">1982</option>
-	<option value="r3">1983</option>
-	<option value="r4">1984</option></select>-й</td></tr>
-	<tr><td>Я знаю</td>
-	<td>
-		<label><input type="checkbox" name="b" value="Русский" checked disabled>Русский</label><br>
-		<label><input type="checkbox" name="b" value="Испанский">Испанский</label><br>
-		<label><input type="checkbox" name="b" value="Немецкий">Немецкий</label><br>
-		<label><input type="checkbox" name="b" value="Английский">Английский</label><br>
-		<label><input type="checkbox" name="b" value="Китайский">Китайский</label>
-	</td></tr>
-	<tr><td>Обо мне </td><td><textarea placeholder="Напишите коротко о себе" rows="8" cols="35"></textarea></td></tr>
-	<tr><td></td><td><button>Готово</button> <button>Очистить</button></td></tr>
-</table>
+  <h1>Форма регистрации пользователя</h1>
+  <p><i>Пожалуйста, заполните форму. Обязательные поля помечены </i><em>*</em></p>
+  <table>
+		<tbody>
+		<tr>
+			<td><label for="email">Email<em>*</em></label></td>
+			<td><input id="email" type="email" placeholder="Введите e-mail"  maxlength=20 required></td>
+		</tr>
+		<tr>
+			<td><label for="password">Пароль<em>*</em></label></td>
+			<td><input id="password" placeholder="Введите пароль"
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+      title="Должен содержать по крайней мере одну цифру и одну букву верхнего или нижнего регистра, 
+             и по крайней мере 8 символов(все буквы латинского алфавита)" required></td>
+		</tr>
+		<tr>
+			<td>Пол</td>
+			<td><input type="radio" id="gender1"
+     		name="contact" value="male" checked>
+    		<label for="gender1">Мужчина</label>
+
+		<input type="radio" id="gender2"
+     		name="contact" value="female">
+    		<label for="gender2">Женщина</label></td>
+		</tr>
+		
+		<tr>
+			<td>Год рождения</td>
+			<td><select>
+				<option>1981</option>
+				<option>1982</option>
+				<option>1983</option>
+				<option>1984</option>
+				<option>1985</option>
+				<option>1986</option>
+				<option>1987</option>
+				<option>1988</option>
+				<option>1989</option>
+				<option>1990</option>
+				<option>1991</option>
+				<option>1992</option>
+				<option>1993</option>
+				<option>1994</option>
+				<option>1995</option>
+				<option>1996</option>
+				<option>1997</option>
+				<option>1998</option>
+				<option>1999</option>
+				<option>2000</option>
+				<option>2001</option>
+				<option>2002</option>
+				<option>2003</option>
+			    </select>-й</td>
+		</tr>
+		<tr>
+			<td>Я знаю</td>
+			<td><label for="Russian"><input id="Russian" type="checkbox"> Русский</label><br>
+    <label for="Spanish"><input id="Spanish" type="checkbox"> Испанский</label><br>
+    <label for="Deutch"><input id="Deutch" type="checkbox"> Немецкий</label><br>
+    <label for="English"><input id="English" type="checkbox"> Английский</label><br>
+    <label for="Chinese"><input id="Chinese" type="checkbox"> Китайский</label><br></td>
+		</tr>
+		<tr>
+			<td><label for="comments">О себе</label></td>
+			<td><textarea id="comments" placeholder="Напишите коротко о себе"></textarea></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Отправить информацию"></td>
+			<td><input type="reset" value="Очистить"></td>
+		</tr>
+		</tbody>
+  </table>
 </form>
 </body>
 </html>
