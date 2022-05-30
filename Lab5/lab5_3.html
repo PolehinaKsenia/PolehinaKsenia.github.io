@@ -1,55 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<html>
 <head>
 <meta charset="utf-8">
 <title>Использование float при построении колонок</title>
-<style type="text/css">
+<style>
+.wrapper{
+	text-align:center;
+}
 #left{
-	float: left;
 	background:#ccf;
 	width:200px;
-}
-#center{
-	display: inline-block;
-	margin: 0 210px 0 210px;  /* Отступ справа и слева */
-	background:#cfc;
-	width: 600px;
+	float:left;
+	display:inline-block;
+	text-align:left;	
 }
 #right{
-	float: right;
 	background:#fcc;
 	width:200px;
+	float:right;
+	display:inline-block;
+	text-align:left;
+}
+#center{
+	background:#cfc;
+	width: 600px; 
+	display:inline-block;
+	text-align:left;
 }
 </style>
 </head>
 <body>
+	<div class="wrapper">
 	<div id="left">left<br>left<br>left<br>left<br>left</div>
 	<div id="right">right<br>right<br>right<br>right</div>
-	<div id="center">center text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text
-	text text text text text text text text text text text text 
-	text text text text text text text text text text text text 
-	text text</div>
+	<div id="center">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
+	</div>
 </body>
 </html>
