@@ -4,23 +4,21 @@
   <meta charset="UTF-8">
   <title>Связать между собой гиперссылками документы из архива</title>
   <base target="_blank"> <!--все ссылки открывались в новом окне-->
+  <style>
+   a:visited {
+      color:green; 
+      text-decoration: none; 
+   } 
+   a:active { 
+      color:black; 
+      text-decoration: none;
+   }
+   a:hover {
+      text-decoration: underline; /* Делает ссылку подчеркнутой при наведении на нее курсора */
+      color: red; /* Цвет ссылки */
+   } 
+ </style>
 </head>
-
-<style>
-  a:visited {
-     color:green; 
-     text-decoration: none; 
-  } 
-  a:active { 
-     color:black; 
-     text-decoration: none;
-  }
-  a:hover {
-     text-decoration: underline; /* Делает ссылку подчеркнутой при наведении на нее курсора */
-     color: red; /* Цвет ссылки */
-  } 
-</style>
-
 <body>
 <h1>Гиперссылки документов из архива lab1_3</h1>
 <p><a href="lab1_3\doc.html">Doc.Ссылки</a></p>
