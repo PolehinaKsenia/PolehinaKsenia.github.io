@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        #view,
+        #area {
+            height: 150px;
+            width: 400px;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+ 
+        #view {
+            /* padding + border = 3px */
+ 
+            padding: 2px;
+            border: 1px solid black;
+        }
+ 
+        #area {
+            display: none;
+            /* replace padding with border (still 3px not to shift the contents) */
+ 
+            border: 3px groove blue;
+            padding: 0px;
+        }
+ 
+        #area:focus {
+            outline: none;
+            /* remove focus border in Safari */
+        }
+    </style>
+</head>
+ 
+<body>
+    <ul>
+        <li>Ctrl-E to start editing.</li>
+        <li>While editing: Ctrl-S to save, Esc to cancel.</li>
+    </ul>
+    <textarea id="area"></textarea>
+    <div id="view">Text</div>
+    <script>
+        let view = document.getElementById("view"),
+            area = document.getElementById("area");
+        document.body.onkeydown = keyHandler;
+ 
+        function keyHandler(e) {
+            if (e.ctrlKey && (e.code === "KeyS" || e.code === "KeyE")) {
+                e.preventDefault();
+                if (e.code === "KeyS") {
+                    if (area.style.display) {
+                        area.style.display = "";
+                        view.style.display = "block";
+                        view.textContent = area.value;
+                    }
+                }
+                else {
+                    if (!area.style.display) {
+                        area.style.display = "block";
+                        view.style.display = "none";
+                        area.value = view.textContent;
+                    }
+                }
+            }
+            if (e.code === "Escape" && area.style.display) {
+                area.style.display = "";
+                view.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
