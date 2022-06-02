@@ -48,7 +48,7 @@
   <script>
     (function() {
 	    let li = document.body.getElementsByTagName("li");
-      for (let i = 1; i <= li.length; i++) {
+      for (let i = 0; i < li.length; i++) {
 	      let num = li[i].getElementsByTagName("li").length;
  	      let name = li[i].firstChild.nodeValue.trim();
  	      alert(`${name}: ${num}`);
