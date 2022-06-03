@@ -4,16 +4,13 @@
  * @returns дробную часть числа num 
  */
 function getDecimal(num) {
-    let a = num.slice(num.indexOf('.'));
-    if (num.indexOf(".") == -1) {
-        return 0;
+    function getDecimal(num) {
+        var str = "" + num;
+        var zeroPos = str.indexOf(".");
+        if (zeroPos == -1) return 0;
+        str = str.slice(zeroPos);
+        return +str;
     }
-    let str = 0 + a;
-    if (Number(num) < 0) {
-        str = 1 - Number(str);
-        str = str.toFixed(a.length - 1);
-    }
-    return str;
 }
 //-------------------------------------------------
 /**
