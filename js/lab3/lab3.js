@@ -3,7 +3,7 @@
  * @param {number} num 
  * @returns строку
  */
-function getDecimal(num) {
+ function getDecimal(num) {
     var str = "" + num;
     var zeroPos = str.indexOf(".");
     if (zeroPos == -1) return 0;
