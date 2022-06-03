@@ -1,15 +1,17 @@
 /**
  * Эта функция возвращает дробную часть числа num.
  * @param {number} num 
- * @returns дробную часть числа num 
+ * @returns 
  */
-function getDecimal(num) {
-        var str = "" + num;
-        var zeroPos = str.indexOf(".");
-        if (zeroPos == -1) return 0;
-        str = str.slice(zeroPos);
-        return +str;
-}
+ function getDecimal(num) {
+    return num > 0 ? (num % 1) : (-num % 1);
+  }function getDecimal(num) {
+    var str = "" + num;
+    var zeroPos = str.indexOf(".");
+    if (zeroPos == -1) return 0;
+    str = str.slice(zeroPos);
+    return +str;
+  }
 //-------------------------------------------------
 /**
  * Эта функция возвращает строку str с заглавным первым символом.
