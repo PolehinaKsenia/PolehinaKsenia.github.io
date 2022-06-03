@@ -63,26 +63,24 @@ function fib(n) {
   }
 //-------------------------------------------------------------------
 /**
- * 5.Этот код принимает целочисленное значение x и возвращает анонимную функцию.
- * @param {number} n число х
- * @param {number} m число у
- * @returns возвращает анонимную функцию
+ * Эта функция должена возвратить функцию, которая сравнивает свой аргумент с числом 5.
+ * @param {number} x 
+ * @returns функцию сравнения
  */
-function compare(n,m){
-	if(n < m){
-		return true;
-	} else if (n > m){
-		return false;
-	} else {
-		return null;
-	}
+function compare(x){
+	let result = function(y){
+    if (y > x) return true;
+    else if (y < x) return false;
+    else return 0;
+  }
+  return result;
 }
 //-------------------------------------------------------------------
 /**
  * 6.Этот код принимает два целочисленных значения и выводит числа от 0 до num 
  * @param {number} num конечное число
  * @param {number} cols количество колонок
- * @returns 
+ * @returns строку
  */
 function printNumbers(num, cols) {
   let str1 = ""
