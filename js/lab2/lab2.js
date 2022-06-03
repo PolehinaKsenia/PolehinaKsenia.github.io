@@ -73,7 +73,7 @@ function compare(x){
 	let result = function(y){
     if (y > x) return true;
     else if (y < x) return false;
-    else return 0;
+    else return null;
   }
   return result;
 }
