@@ -19,7 +19,7 @@ function pow(x, n) {
 /**
  * Этот код вычисляет сумму чисел от 1 до n.
  * @param {number} n натуральное число
- * @returns 
+ * @returns сумма чисел от 1 до n
  */
 function sumTo(n) {
   let sum = 0;
@@ -32,19 +32,19 @@ function sumTo(n) {
 /**
  * Этот код возвращает факториал числа n!, используя рекурсивный вызов.
  * @param {number} n число
- * @returns 
+ * @returns факториал числа n!
  */
 function factorial(n) {
-  if (n == 1)
-	return 1;
-	return n * factorial(n-1);  
+  if (n == 1){	return 1;}
+  else if (x == 0) {return 1;}
+  else return n * factorial(n-1);  
 }
 //-------------------------------------------------------------------
 /**
  * Этот код возвращает n-е число Фибоначчи.
  * Возвращаемое значение должно иметь тип BigInt.
  * @param {number} n число
- * @returns 
+ * @returns n-е число Фибоначчи
  */
 function fib(n) {
     let a = 1n;
@@ -67,7 +67,7 @@ function fib(n) {
  * Этот код принимает целочисленное значение x и возвращает анонимную функцию.
  * @param {number} n число х
  * @param {number} m число у
- * @returns 
+ * @returns возвращает анонимную функцию
  */
 function compare(n,m){
 	if(n < m){

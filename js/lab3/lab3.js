@@ -29,7 +29,7 @@ function ucFirst(str) {
 //-------------------------------------------------
 /**
  * Этот код возвращает true, если строка str содержит 'viagra' или 'XXX', а иначе false.
- * @param {text} str 
+ * @param {string} str 
  * @returns 
  */
 function checkSpam(str) {
@@ -62,7 +62,7 @@ function checkSpam(str) {
  * она превосходит maxlength – заменяет конец str 
  * на символ многоточие "…" (номер в Юникоде U+2026), 
  * так чтобы ее длина стала равна maxlength. 
- * @param {text} str 
+ * @param {string} str 
  * @param {number} maxlength 
  * @returns 
  */
@@ -76,7 +76,7 @@ function truncate(str, maxlength) {
  * Этот код преобразуeт строку вида 'var-test-text'
  * в 'varTestText'. То есть, дефисы удаляются, 
  * а все слова после них получают заглавную букву.
- * @param {text} str 
+ * @param {string} str 
  * @returns 
  */
 function camelize(str) {
