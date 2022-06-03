@@ -35,7 +35,7 @@ function sumTo(n) {
  * @returns факториал числа n!
  */
 function factorial(n) {
-  if (n) return n * factorial(n-1);
+  if (n) return (n * factorial(n-1))
   else return 1; 
 }
 //-------------------------------------------------------------------
