@@ -4,7 +4,7 @@
  * @returns строку
  */
  function getDecimal(num) {
-    return num > 0 ? (num % 1) : (-num % 1);
+    return num - Math.floor(num);
   }
 //-------------------------------------------------
 /**
