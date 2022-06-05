@@ -76,7 +76,7 @@ function camelize(str) {
  * @param {number} N 
  * @returns массив
  */
-function fibs(N) {
+ function fibs(N) {
     let a = [];
     let str = '';
     if (!Number.isNaN(N))
@@ -87,10 +87,30 @@ function fibs(N) {
                 str += a[j] + ' ';
             }
     else str = NaN;
+
     return str;
+
+    function fib(j) {
+        let a = 1n;
+        let b = 1n;
+        let c;
+        if (j == 0) return 0;
+        if (j == 1) return 1;
+        if (j == 2) return 1;
+        for (let i = 3; i <= j; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        if (b == 1n)
+            b = 0;
+        return b;
+    }
 }
 //-------------------------------------------------
+function arrReverseSorted(){
 
+}
 //-------------------------------------------------
 /**
  * Эта функция возвращает сумму всех своих аргументов
