@@ -108,8 +108,15 @@ function camelize(str) {
     }
 }
 //-------------------------------------------------
-function arrReverseSorted(){
-
+/**
+ * 
+ * @param {num} arr 
+ * @returns arr
+ */
+function arrReverseSorted(arr){
+        let x = arr.slice();
+        x.sort((a, b) => b-a);
+    return x;
 }
 //-------------------------------------------------
 /**
