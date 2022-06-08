@@ -89,7 +89,6 @@ function camelize(str) {
     else str = NaN;
 
     return str;
-    }
 }
 //-------------------------------------------------
 /**
