@@ -78,6 +78,7 @@ function camelize(str) {
  */
 const script = document.createElement('script');
 script.src = '/lab2/lab2.js';
+document.head.appendChild(script);
  function fibs(N) {
     let a = [];
     let str = '';
