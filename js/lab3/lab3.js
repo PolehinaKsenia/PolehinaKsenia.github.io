@@ -81,18 +81,16 @@ script.src = '/lab2/lab2.js';
 document.head.appendChild(script);
  function fibs(N) {
     let a = [];
-    let str = '';
+    let arr = [];
     if (!Number.isNaN(N))
         if (N == 0) str = 0;
         else
             for (let j = 0; j < N; ++j) {
                 a[j] = fib(j);
-                str += a[j] + ' ';
+                arr[i] += a[j] + ' ';
             }
-    else str = NaN;
+      return arr;
 
-    return str;
-    
     function fib(n) {
         let a = 1n;
         let b = 1n;
