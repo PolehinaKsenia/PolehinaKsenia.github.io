@@ -76,6 +76,8 @@ function camelize(str) {
  * @param {number} N 
  * @returns массив
  */
+const script = document.createElement('script');
+script.src = '/lab2/lab2.js';
  function fibs(N) {
     let a = [];
     let str = '';
