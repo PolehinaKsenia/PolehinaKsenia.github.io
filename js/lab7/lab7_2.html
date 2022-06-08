@@ -22,7 +22,7 @@
 </head>
 <body>
     <div></div>
-	<input type="text" class="placeholder" placeholder="строка"> 
+	<input type="text" class="data-placeholder" data-placeholder="строка"> 
 	
 	<script>
 		'use strict';
@@ -31,12 +31,12 @@
 		let div = document.querySelector("div");
 
 		input.onfocus = function(){
-			div.innerHTML = input.getAttribute("placeholder");
-			input.setAttribute("placeholder","");
+			div.innerHTML = input.getAttribute("data-placeholder");
+			input.setAttribute("data-placeholder","");
 		}; 
 		
 		input.onblur = function(){ 
-			input.setAttribute("placeholder",div.innerHTML);
+			input.setAttribute("data-placeholder",div.innerHTML);
 			div.innerHTML = ""; 
 		}; 
 	</script>
