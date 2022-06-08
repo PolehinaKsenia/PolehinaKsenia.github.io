@@ -35,7 +35,10 @@
 
         obj.addClass('new');
         obj.addClass('open');
-        obj.addClass();
+        if(obj.addClass()){
+            this.className = arr.join("");
+
+        }
 
         alert(obj.className);
 
