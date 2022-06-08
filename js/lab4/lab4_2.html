@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 2</title>
 </head>
+
 <body>
     <script>
         'use strict';
-        let book1={};
+        let book1 = {};
         book1.title = "Молоко";
         book1.pubYear = 2022;
         book1.price = 1;
-        book1.show = function(){
-            console.log(book1.title +" - "+ book1.price);
+        book1.show = function () {
+            console.log(this.title + " - " + this.price);
         }
 
-        function showBook(){
-            console.log(this.title +' - '+ this.price);
+        function showBook() {
+            console.log(this.title + ' - ' + this.price);
         }
-           
-        
-        let book2={
+
+
+        let book2 = {
             title: "Шоколад",
             pubYear: 2023,
             price: 8,
@@ -32,7 +34,8 @@
 
         book1.show();
         console.log("\n");
-		book2.show();
+        book2.show();
     </script>
 </body>
+
 </html>
