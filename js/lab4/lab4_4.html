@@ -10,48 +10,31 @@
 
 <body>
     <script>
-        'use strict'
-        let obj = {
+        "use strict"
+        var obj = {
             className: 'open menu'
         }
-
-        obj.addClass = function (cls) {
-            let subObj = {};
-
-            let arr = this.className ? this.className.split(" ") : [];
-
-            for (let i = 0; i < arr.length; i++) {
+    
+        function addClass(obj, cls){
+            var subObj = {};
+            // если свойство существует, получаем из его классов масив.
+            var arr = obj.className ? obj.className.split(" "):[];
+            // заносим элементы в объект.
+            for(var i=0;i<arr.length;i++){
                 subObj[arr[i]] = true;
             }
-
+            // если класа нет то свойство добавится.
             subObj[cls] = true;
-
-            arr = Object.keys(subObj);
-
-            this.className = arr.join(" ");
-
-            return this;
+            // получаем из свойств объекта, массив.
+            arr = Object.keys(subObj);        
+            // присваеваем свойству объекта, новый список классов.
+            obj.className = arr.join(" ");        
         }
-
-        obj.addClass('new').addClass('');
-
-        alert(obj.className);
-
-        obj.removeClass = function (cls) {
-            let arr = this.className ? this.className.split(" ") : [];
-
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i] == cls) {
-                    arr.splice(i, 1);
-                    i--;
-                }
-            }
-            this.className = arr.join(' ');
-            return this;
-        }
-
-
-        obj.removeClass('open').addClass('test');
+    
+        addClass(obj, 'new'); // obj.className='open menu new'
+        addClass(obj, 'open');  // без изменений (класс уже существует)
+        addClass(obj, 'me'); // obj.className='open menu new me'
+    
         alert(obj.className);
     </script>
 </body>
