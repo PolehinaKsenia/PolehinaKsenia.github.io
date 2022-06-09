@@ -34,7 +34,10 @@
         }
 
         obj.addClass('new');
-        obj.addClass('open');    
+        obj.addClass();
+        if(obj.addClass()){
+            obj.addClass('open');
+        }    
 
         alert(obj.className);
 
