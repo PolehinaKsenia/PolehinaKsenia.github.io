@@ -33,11 +33,11 @@
             return this;
         }
 
-        obj.addClass('new');
-        obj.addClass();
-        if(obj.addClass()){
+        
+        if(!obj.addClass()){
+            obj.addClass('new');
             obj.addClass('open');
-        }    
+        }
 
         alert(obj.className);
 
