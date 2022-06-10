@@ -15,22 +15,16 @@
             className: 'open menu'
         }
 
-        obj.addClass = function (cls) {
+        addClass = function (cls) {
             if(cls=='') return this;
             if(cls.includes(' ')){
                 return this;
             }
             if(!this.className.includes(cls)) this.className += ' '+cls;
             return this;
-        }
+        }    
 
-        obj.addClass('new');
-        obj.addClass('open'); 
-        obj.addClass();    
-
-        alert(obj.className);
-
-        obj.removeClass = function (cls) {
+        removeClass = function (cls) {
             if(cls=='') return this;
             if(this.className.includes(cls)){
                 if(this.className.indexOf(cls) != 0){
@@ -50,9 +44,10 @@
         }
 
 
-        obj.removeClass('open');
-        obj.addClass('test');
-        alert(obj.className);
+        let cls = prompt('Добавьте класс: ');
+        alert(obj.addClass(cls));
+        let cll = prompt('delete: ');
+        alert(obj.removeClass(cls));
     </script>
 </body>
 
