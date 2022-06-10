@@ -26,15 +26,12 @@
              // если класа нет то свойство добавится.
             subObj[cls] = true;
             // получаем из свойств объекта, массив.
-            if(arr = Object.keys(subObj)){
+            
+            arr = Object.keys(subObj);
             // присваеваем свойству объекта, новый список классов.
             this.className = arr.join(" ");
+
             return this;
-            }
-            else if (arr = Object.keys()) {
-                this.className = arr.join("");
-            return this;
-            }
         }
 
         obj.addClass('new');
