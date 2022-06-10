@@ -17,6 +17,21 @@
 
         obj.addClass = function (cls) {
             if(cls=='') return this;
+            if(cls.includs(' ')){
+                return this;
+            }
+            if(!this.className.includes(cls)) this.className += ' '+cls;
+            return this;
+        }
+
+        obj.addClass('new');
+        obj.addClass('open'); 
+        obj.addClass();    
+
+        alert(obj.className);
+
+        obj.removeClass = function (cls) {
+            if(cls=='') return this;
             if(this.className.includes(cls)){
                 if(this.className.indexOf(cls) != 0){
                     let pos = this.className.indexOf(' ' + cls);
@@ -31,25 +46,6 @@
                     this.className = this.className.subst(0, pos) + this.className.subst(pos + cls.length + 1);
                 }
             }
-            return this;
-        }
-
-        obj.addClass('new');
-        obj.addClass('open'); 
-        obj.addClass();    
-
-        alert(obj.className);
-
-        obj.removeClass = function (cls) {
-            let arr = this.className ? this.className.split(" ") : [];
-
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i] == cls) {
-                    arr.splice(i, 1);
-                    i--;
-                }
-            }
-            this.className = arr.join(' ');
             return this;
         }
 
