@@ -16,21 +16,21 @@
         }
 
         obj.addClass = function (cls) {
-            let subObj = {};
-            // если свойство существует, получаем из его классов масив.
-            let arr = this.className ? this.className.split(" ") : [];
-            // заносим элементы в объект.
-            for (let i = 0; i < arr.length; i++) {
-                subObj[arr[i]] = true;
+            if(cls=='') return this;
+            if(this.className.includes(cls)){
+                if(this.className.indexOf(cls) != 0){
+                    let pos = this.className.indexOf(' ' + cls);
+                    this.className = this.className.subst(0, pos) + this.className.subst(pos + cls.length + 1);
+                }
+                else if (this.className.includes(cls + ' ')){
+                    let pos = this.className.indexOf(cls + ' ');
+                    this.className = this.className.subst(0, pos) + this.className.subst(pos + cls.length + 1);
+                }
+                else{
+                    let pos = this.className.indexOf(cls);
+                    this.className = this.className.subst(0, pos) + this.className.subst(pos + cls.length + 1);
+                }
             }
-             // если класа нет то свойство добавится.
-            subObj[cls] = true;
-
-            // получаем из свойств объекта, массив.        
-            arr = Object.keys(subObj);
-            // присваеваем свойству объекта, новый список классов.
-            this.className = arr.join(" ");
-
             return this;
         }
 
