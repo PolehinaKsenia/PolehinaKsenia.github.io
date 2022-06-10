@@ -17,7 +17,7 @@
 
         obj.addClass = function (cls) {
             if(cls=='') return this;
-            if(cls.includs(' ')){
+            if(cls.includes(' ')){
                 return this;
             }
             if(!this.className.includes(cls)) this.className += ' '+cls;
