@@ -1,53 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 4</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Задание 4</title>
 </head>
-
 <body>
     <script>
-        'use strict'
+        "use strict";
         let obj = {
             className: 'open menu',
-
-        addClass : function (cls) {
-            if(cls=='') return this;
-            if(cls.includes(' ')){
+        addClass: function (cls) {
+            if (cls == '') return this;
+            if (cls.includes(' ')) {
                 return this;
             }
-            if(!this.className.includes(cls)) this.className += ' '+cls;
-            return this;
-        },
+            if (!this.className.includes(cls)) this.className += ' ' + cls;
+                return this;
+            },
 
-        removeClass : function (cls) {
-            if(cls=='') return this;
-            if(this.className.includes(cls)){
-                if(this.className.indexOf(cls) != 0){
-                    let pos = this.className.indexOf(' ' + cls);
-                    this.className = this.className.subst(0, pos) + this.className.subst(pos + cls.length + 1);
-                }
-                else if (this.className.includes(cls + ' ')){
-                    let pos = this.className.indexOf(cls + ' ');
-                    this.className = this.className.subst(0, pos) + this.className.subst(pos + cls.length + 1);
-                }
-                else{
-                    let pos = this.className.indexOf(cls);
-                    this.className = this.className.subst(0, pos) + this.className.subst(pos + cls.length + 1);
+        removeClass: function (cls) {
+            if (cls == '') return this;
+            if (this.className.includes(cls)) {
+                if (this.className.indexOf(cls) != 0) {
+                let pos = this.className.indexOf(' ' + cls);
+                this.className = this.className.substr(0, pos) + this.className.substr(pos + cls.length + 1);
+            } 
+                else if (this.className.includes(cls + ' ')) {
+                let pos = this.className.indexOf(cls + ' ');
+                this.className = this.className.substr(0, pos) + this.className.substr(pos + cls.length + 1);
+                } 
+                else {
+                let pos = this.className.indexOf(cls);
+                this.className = this.className.substr(0, pos) + this.className.substr(pos + cls.length + 1);
                 }
             }
             return this;
-        }
+            }
         };
+        let cls = prompt('Добавьте класс:');
+        console.log(obj.addClass(cls).removeClass('open'));
 
-        let cls = prompt('Добавьте класс: ');
-        console.log(obj.addClass(cls));
-        let cll = prompt('delete: ');
-        console.log(obj.removeClass(cll));
     </script>
 </body>
-
 </html>
