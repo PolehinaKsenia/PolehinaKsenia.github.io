@@ -16,10 +16,11 @@
         }
 
         obj.addClass = function (cls) {
+            if(!obj.addClass()){
             let subObj = {};
 
             let arr = this.className ? this.className.split(" ") : [];
-
+            
             for (let i = 0; i < arr.length; i++) {
                 subObj[arr[i]] = true;
             }
@@ -30,11 +31,26 @@
 
             this.className = arr.join(" ");
 
-            return this;
+            return this;}
+            else{
+                let subObj = {};
+
+            let arr = this.className ? this.className.split(" ") : [];
+            
+            for (let i = 0; i < arr.length; i++) {
+                subObj[arr[i]] = true;
+            }
+
+            subObj[cls] = true;
+
+            arr = Object.keys(subObj);
+
+            this.className = arr.join("");
+            }
         }
 
         obj.addClass('new');
-        obj.addClass('open');    
+        obj.addClass();    
 
         alert(obj.className);
 
