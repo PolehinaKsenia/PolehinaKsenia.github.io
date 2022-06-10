@@ -14,7 +14,7 @@
         let obj = {
             className: 'open menu',
 
-        addClass = function (cls) {
+        addClass : function (cls) {
             if(cls=='') return this;
             if(cls.includes(' ')){
                 return this;
@@ -23,7 +23,7 @@
             return this;
         },
 
-        removeClass = function (cls) {
+        removeClass : function (cls) {
             if(cls=='') return this;
             if(this.className.includes(cls)){
                 if(this.className.indexOf(cls) != 0){
