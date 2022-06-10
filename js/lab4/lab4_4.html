@@ -12,7 +12,7 @@
     <script>
         'use strict'
         let obj = {
-            className: 'open menu'
+            className: 'open menu',
 
         addClass = function (cls) {
             if(cls=='') return this;
@@ -21,7 +21,7 @@
             }
             if(!this.className.includes(cls)) this.className += ' '+cls;
             return this;
-        }    
+        },
 
         removeClass = function (cls) {
             if(cls=='') return this;
