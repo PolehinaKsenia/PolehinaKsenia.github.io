@@ -1,0 +1,79 @@
+div{
+	outline: 2px solid #000;
+}
+/*Сайт*/
+body{
+	background: DarkRed; 
+}
+#basa{
+	margin: 0 15%;
+	background: PeachPuff; 
+}
+/*Шапка сайта*/
+.logo{
+	width: 110px;
+	height: 70px;
+}
+.zag{
+	width: 500px;
+	height: 70px;
+}
+.tele{
+	width: 50px;
+	height: 70px;
+}
+.telephon{
+	float: right;
+}
+
+/*Верхнее меню сайта*/
+#menu-top{
+	height: 74px;
+}
+.bg-1{ 
+	height: 64px;
+	background: DarkRed;
+}
+.bg-2{
+	height: 10px;
+	background: Tomato;
+}
+.bg-1 ul{
+	list-style: none;
+}
+.bg-1 ul li{
+	float: left;
+}
+.bg-1 ul li a{
+	display: block;
+	height: 40px;
+	padding: 24px 27px 0 27px; 
+	color: OrangeRed; 
+	text-decoration: none; 		/*убрать подчеркивание у ссылок*/
+	text-transform: uppercase;	/*верхний регистр*/
+}
+.bg-1 ul li a:hover {
+	color: White; 
+	background: Tomato;
+	}
+	
+/*Левое меню и Контент*/
+#content {padding:20px 0 0 0; }
+.right { float:right; padding:0 0 0 20px; text-align:justify;}
+.right h1 {text-transform:uppercase; color:#4c281e; font-weight:normal; margin-top:0;}
+.left {float:left;}
+.block-nad-menu {height:10px; background:#ff9c00;}
+.block-pod-menu {margin:0 0 0 10px; height:10px; background:#4c281e;}
+.block-menu {border-left:10px solid #ff9c00; background:#4c281e;}
+.left ul {margin:0; padding:10px 0 0 0; list-style:none;}
+.left ul li {background:url(images/m3.png) no-repeat bottom left;}
+.left ul li a {display:block; color:#fff; text-decoration:none; padding:10px 5px 10px 40px; background: url(images/marker.png) no-repeat 10px 8px;}
+.left ul li a:hover {background:#ff9c00 url(images/marker.png) no-repeat 10px 8px;}
+li.none-bg {background:none!important;}	
+
+/*Подвал*/
+#footer {border-top:10px solid #4c281e; margin-top:20px;}
+.yellow {height:5px; margin:0 auto; background:#ff9c00;}
+.p1 {float:left; padding:15px 0 0 0;}
+.p2 {float:right; text-align:right; padding:15px 20px 0 0;}
+.p3 {float:right; padding:15px 0 0 0;}
