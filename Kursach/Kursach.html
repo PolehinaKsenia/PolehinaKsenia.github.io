@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Столярная мастерская</title>
+		<link rel="stylesheet" href="style.css" type="text/css" />
 	</head>
 	<body>
-		<!--Шапка-->
-		<div id = "header">
-			<img src="/Kursach/logo.png" alt="Столярная мастерская" title="Столярная мастерская" />
-			<img src="/Kursach/logo.png" alt="8(903)880-54-04" title="8(903)880-54-04" class="telefon" />
+		<!-- Основной блок сайта -->
+		<div id="basa">
+			<!--Шапка-->
+			<div id = "header">
+				<img src="images/logo.png" width = 110spx height = 70px alt="Столярная мастерская" title="Столярная мастерская"/>
+				<img src="images/telephon.jpg" width = 50spx height = 35px alt="8(903)880-54-04" title="8(903)880-54-04" class="telephon"/>
+			</div>
+			<!-- Верхнее меню сайта -->
+			<div id="menu-top">
+				<div class="bg-1">
+					<ul>
+						<li><a href="#">Каталог</a></li>
+						<li><a href="#">Готовые изделия</a></li>
+						<li><a href="#">Отзывы</a></li>
+						<li><a href="#">Заказать</a></li>
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#">О нас</a></li>
+					</ul>
+				</div>
+				<div class="bg-2"></div>
+			</div>
+			<!-- Левое меню и Контент -->
+			<div id="content">
+				<!-- Контент - правый блок -->
+				<div class="right">
+					<h1>Столярная мастерская</h1>
+					<p>blablabla</p>
+				</div>
+				<!-- Левое меню - левый блок -->
+				<div class="left">
+					<div class="block-nad-menu"></div>
+                    <div class="block-menu">
+						<ul>
+							<li><a href="#">Столы</a></li>
+							<li><a href="#">Стулья</a></li>
+							<li><a href="#">Лестницы</a></li>
+							<li><a href="#">Шкафы</a></li>
+							<li><a href="#">Шкатулки</a></li>
+							<li class="none-bg"><a href="#">Прочее</a></li>
+						</ul>
+                    </div>
+                    <div class="block-pod-menu"></div>
+                </div>
+				</div>
+			<!-- Подвал -->
+			<div id="footer">
+				<div class="yellow"></div>
+				<div class="p1">ООО “Сталярная мастерская” 2022г.<br/>
+				г. Орел, ул Пятницкая 129</div>
+				<div class="p2">Поддержка</div>
+				<div class="p3">polehina.ksusha@yandex.ru</div>
+			</div>
 		</div>
 	</body>
 </html>
