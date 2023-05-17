@@ -28,7 +28,7 @@ function filter($str, $param='s'){
 $host ='localhost';
 $db = 'f0720722_login_db';
 $user = 'f0720722_login_db';
-$pass = '16281107Qq';
+$pass = '';
 $charset = 'utf8';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
